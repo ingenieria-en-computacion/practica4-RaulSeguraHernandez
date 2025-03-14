@@ -4,24 +4,25 @@
 int main() {
     int n;
     printf("Ingrese el tamaño del arreglo: ");
-    
+    scanf("%d", &n);
 
     int *arr;
     if (arr == NULL) {
         printf("Error: No se pudo asignar memoria.\n");
         return 1;
     }
+    arr = (int*)malloc(sizeof(int)*n);
 
     printf("Ingrese %d valores:\n", n);
     for (int i = 0; i < n; i++) {
-        
+        scanf("%d", &arr[i]);
     }
 
-    printf("El arreglo es: ");
+    printf("El arreglo es: [ ");
     for (int i = 0; i < n; i++) {
-        
+        printf("%d ", arr[i]);
     }
-    printf("\n");
+    printf("] \n");
 
     
     return 0;
