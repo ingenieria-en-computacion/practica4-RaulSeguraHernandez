@@ -7,11 +7,14 @@ int main() {
     scanf("%d", &n);
 
     int *arr;
+
+    arr = (int*)malloc(sizeof(int)*n);
+    
     if (arr == NULL) {
         printf("Error: No se pudo asignar memoria.\n");
         return 1;
     }
-    arr = (int*)malloc(sizeof(int)*n);
+    
 
     printf("Ingrese %d valores:\n", n);
     for (int i = 0; i < n; i++) {
